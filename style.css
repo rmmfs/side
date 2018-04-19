@@ -1,0 +1,730 @@
+/*-------------------------------------------
+Project: HPE Side by Side
+URL: http://www.hpesidebyside.pt
+Owner: HPE Portugal
+Author: ricardo ferreira da silva
+Role: ux/ui design, front-end development & content management
+Version: 2
+Online since: 01/01/16
+Last update: 18/02/18
+Description: Base styles
+-------------------------------------------*/
+
+/* reset
+----------------------------------*/
+
+/**
+* Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+* http://cssreset.com
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* clearfix: contain floats
+----------------------------------*/
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.search-field form:before,
+.search-field form:after,
+.reward-single:before,
+.reward-single:after,
+.page-banner:before,
+.page-banner:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after {
+	content: '';
+	display: table;
+	/*for IE 6/7 only to trigger hasLayout and contain floats.*/
+    *zoom: 1;
+}
+
+.site-header:after,
+.search-field form:after,
+.reward-single:after,
+.page-banner:after,
+.entry-content:after,
+.comment-content:after {
+	clear: both;
+}
+
+/* global
+---------------------------------------------------------*/
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/*-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;*/
+	}
+
+html {
+	font-size: 62.5%;
+	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	overflow: -moz-scrollbars-vertical;
+	overflow-y: scroll;
+	}
+
+body {
+    font-family:'Metric-Light';
+    background-color: #fff;
+    }
+
+
+::-webkit-selection,
+::-moz-selection,
+::selection {
+	background: #ccc;
+	color: #000; }
+
+/* scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar:horizontal { height: 10px; }
+::-webkit-scrollbar-corner { background: #F2F2F2; }
+::-webkit-scrollbar-track { background: #fff; border-right: 1px solid #EEE; }
+::-webkit-scrollbar-thumb { background: #CCC; }
+::-webkit-scrollbar-thumb:hover { background: #222; }
+::-webkit-scrollbar-thumb:window-inactive { background: #444; }
+
+
+
+/* reusable
+--------------*/
+
+.black { color: #000000; }
+.white { color: #ffffff; }
+.green { color: #00B388; }
+.orange { color: #FF8D6D; }
+.purple { color: #614767; }
+.slate { color: #425563; }
+.bronze { color: #80746E; }
+.dark-steel { color: #5F7A76; }
+.gray { color: #C6C9CA; }
+.gray-light { color: #f6f6f6; }
+
+.bg-white { background-color: rgba(255,255,255,1); }
+.bg-purple { background-color: #614767; }
+.bg-slate { background-color: #425563; }
+.bg-orange { background-color: rgba(255,141,109,1); }
+.bg-bronze { background-color: #80746E; }
+.bg-dark-steel { background-color: #5F7A76; }
+.bg-grey { background-color: #C6C9CA; }
+.bg-grey-light { background-color: #f6f6f6; }
+
+.align-center {
+	text-align: center;
+	}
+
+.inline {
+	display: inline;
+	}
+
+.inline-block {
+	display: inline-block;
+	}
+
+.valign {
+	vertical-align: middle;
+	}
+
+.hidden {
+	position: absolute;
+	left: -9999px;
+	text-indent: -9999px;
+	overflow: hidden;
+	}
+
+.no-display {
+	display: none;
+	}
+
+
+/* show hide desktop / mobile */
+@media screen and (max-width: 680px) {
+	.desktop { display: none; }
+}
+
+
+.mobile { display: none; }
+
+@media screen and (max-width: 681px) {
+	.mobile { display: block; }
+}
+
+
+/* type
+--------------*/
+
+@font-face {
+	font-family:'Metric-Light';
+	src: url('fonts/MetricHPE-Web-Light.eot');
+	src: url('fonts/MetricHPE-Web-Light.woff') format('woff'),
+		url('fonts/MetricHPE-App-Light.ttf') format('truetype'),
+		url('fonts/MetricHPE-Desktop-Light.otf') format('opentype');
+	font-style: normal;
+	font-stretch: normal;
+	}
+
+@font-face {
+	font-family:'Metric-Regular';
+	src: url('fonts/MetricHPE-Web-Regular.eot');
+	src: url('fonts/MetricHPE-Web-Regular.woff') format('woff'),
+		url('fonts/MetricHPE-App-Regular.ttf') format('truetype'),
+		url('fonts/MetricHPE-Desktop-Regular.otf') format('opentype');
+	font-style: normal;
+	font-stretch: normal;
+	}
+
+@font-face {
+	font-family:'Metric-Medium';
+	src: url('fonts/MetricHPE-Web-Medium.eot');
+	src: url('fonts/MetricHPE-Web-Medium.woff') format('woff'),
+		url('fonts/MetricHPE-App-Medium.ttf') format('truetype'),
+		url('fonts/MetricHPE-Desktop-Medium.otf') format('opentype');
+	font-style: normal;
+	font-stretch: normal;
+	}
+
+@font-face {
+	font-family:'Metric-Semibold';
+	src: url('fonts/MetricHPE-Web-Semibold.eot');
+	src: url('fonts/MetricHPE-Web-Semibold.woff') format('woff'),
+		url('fonts/MetricHPE-App-Semibold.ttf') format('truetype'),
+		url('fonts/MetricHPE-Desktop-Semibold.otf') format('opentype');
+	font-style: normal;
+	font-stretch: normal;
+	}
+
+@font-face {
+	font-family:'Metric-Bold';
+	src: url('fonts/MetricHPE-Web-Bold.eot');
+	src: url('fonts/MetricHPE-Web-Bold.woff') format('woff'),
+		url('fonts/MetricHPE-App-Bold.ttf') format('truetype'),
+		url('fonts/MetricHPE-Desktop-Bold.otf') format('opentype');
+	font-style: normal;
+	font-stretch: normal;
+	}
+
+p {
+	margin: 0 0 10px;
+	}
+
+small {
+	font-size: 12px;
+	line-height: 16px;
+	}
+
+sup {
+	position: relative;
+	bottom: 2px;
+	font-family:'Metric-Light';
+	font-size: 75%;
+	font-weight: normal;
+	line-height: 0;
+	vertical-align: baseline;
+	color: #FF8D6D;
+	}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+	}
+
+/*
+    headings     h1|h2|h3|h4|h5
+    font-size:   32|24|20|16|14
+    line-height: 32|30|24|22|18
+-------------------------------------------*/
+h1,
+h2,
+h3,
+h4 {
+	font-family:'Metric-Semibold';
+	}
+
+/* main pages with banner */
+/* home */.page-id-8 h1,
+/* programa */.page-id-10 h1,
+/* produtos */.page-id-12 h1,
+/* premios */.page-id-14 h1,
+/* campanhas */.page-id-16 h1,
+/* noticias */.page-id-18 h1 {
+	font-size: 60px;
+	line-height: 55px;
+	}
+
+/* home */.page-id-8 h2,
+/* programa */.page-id-10 h2,
+/* produtos */.page-id-12 h2,
+/* premios */.page-id-14 h2,
+/* campanhas */.page-id-16 h2,
+/* noticias */.page-id-18 h2 {
+	font-size: 40px;
+	line-height: 42px;
+	}
+
+/* subpages  */
+h1 {
+	/* h2 */
+	font-size: 40px;
+	line-height: 42px;
+	}
+
+h2 {
+	/* h3 */
+	font-size: 30px;
+	line-height: 33px;
+	}
+
+h3 {
+	font-size: 25px;
+	line-height: 27px;
+	margin: 30px 0;
+	}
+
+h4 {
+	font-size: 20px;
+	line-height: 23px;
+	margin: 10px 0;
+	}
+
+/* h4 */
+p,
+li,
+a,
+span {
+    font-family:'Metric-Light';
+	font-size: 18px;
+	line-height: 22px;
+	}
+
+.notes {
+	display: inline-block;
+	/*float: left;*/
+	/*max-width: 70%;*/
+	font-size: 13px;
+	line-height: 1.1;
+	color: #707070;
+	margin: 30px 0 30px 14px;
+	}
+
+	.notes::before {
+		position: relative;
+		right: 13px;
+		top: 11px;
+		content: "";
+		display: block;
+		height: 5px;
+		width: 5px;
+		background-color: #c6c9ca;
+		}
+
+	.notes sup {
+		font-size: 12px; }
+
+b,
+strong,
+.strong,
+/* wp templates */ .page-title {
+	font-family:'Metric-Semibold'; }
+
+.body-copy,
+.body-copy-large,
+.body-copy-small {
+    font-family:'Metric-Light';
+    font-style: normal;
+}
+
+.body-copy-large {
+	font-size: 23px;
+	line-height: 25px;
+	}
+
+.body-copy-small {
+	font-size: 15px;
+	line-height: 19px;
+	}
+
+
+/* anchor
+--------------*/
+
+.site-main a {
+	text-decoration: none;
+	border-bottom: 1px solid #00b388;
+	color: #000;
+}
+
+.site-main a:hover,
+.site-main a:focus {
+	color: #00B388;
+	border-bottom-color: #707070;
+ }
+
+a:focus { outline: 0; }
+
+a img { border: 0; }
+
+.a-more {
+	font-family:'Metric-Regular';
+	font-size: 18px;
+	line-height: 22px;
+	text-decoration: none;
+	color: #fff !important;
+	border-bottom: none !important;
+	cursor: pointer;
+	display: block;
+	/*padding: 0 0 0 1.6em;*/
+	}
+
+
+/* image
+--------------*/
+
+img {
+   max-width: 100%;
+   height: auto;
+   page-break-inside: avoid;
+   vertical-align: bottom;
+   pointer-events: none;
+   }
+
+.hpe-image {
+	margin: 20px 0;
+	height: auto;
+	}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     /* IE10+ CSS styles go here */
+	 img { flex-shrink: 0; }
+}
+
+svg path,
+svg rect {
+ 	fill: #00b388;
+ 	}
+
+/* form
+--------------*/
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+	-moz-appearance: none;
+	height: 100%;
+
+	padding: 10px 50px 10px 15px;
+	border: 1px solid #c6c9ca;
+	border-radius: 0;
+	outline: 0 none;
+
+	color: #000;
+	font-family:'Metric-Regular';
+	font-size: 18px;
+	line-height: 22px;
+
+	transition: top 250ms ease-in 0s;
+	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+	z-index: 2;
+}
+
+
+/*input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="search"]:hover,
+textarea:hover,
+select:hover,*/
+input[type="text"]:active,
+input[type="email"]:active,
+input[type="password"]:active,
+input[type="search"]:active,
+textarea:active,
+select:active,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus
+select:focus {
+	border: 1px solid #00B388;
+}
+
+input[type="text"]:focus,
+input[type="email"]:active,
+input[type="password"]:focus,
+select:focus { outline: 0; }
+
+textarea {
+	/*outline: none;*/
+	resize: none;
+	overflow: hidden;
+	overflow: auto;
+	vertical-align: top; }
+
+input,
+select {
+	font-family: sans-serif;
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	width: 100%;
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */ }
+
+select {
+	width: 100%;
+	border-radius: 0;
+	background-color: #fff;
+	}
+
+input[type="search"] {
+	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	-moz-box-sizing: content-box;
+	box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-decoration {
+	/* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none; }
+
+input::-moz-focus-inner {
+	/* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+	padding: 0; }
+
+	.req-field {
+		position: relative;
+		top: 8px;
+		font-size: 13px !important;
+		line-height: 1;
+		color: #767676;
+		}
+
+    .req-symbol {
+		font-size: 15px;
+		color: #FF8D6D;
+		}
+
+
+/* button
+--------------*/
+
+.btn-area {
+	position: relative;
+	margin: 20px 0;
+	height: auto;
+}
+
+/* banner */.banner-info .btn-area,
+/* product | services tab */#section-2 .btn-area,
+/* product | software tab */#section-3 .btn-area,
+/* product | campaign tab */#section-4 .btn-area {
+	margin: 5px 0 0 0;
+	/*text-decoration:none;
+	max-width:385px;*/
+	}
+
+.btn,
+input[type="submit"] {
+	display: inline-block;
+	margin-bottom: 0;
+	width: auto;
+	padding: 10px 30px;
+	font-family:'Metric-Regular';
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: center;
+	vertical-align: middle;
+	white-space: normal;
+	border-radius: 0;
+	-moz-user-select: none;
+	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+	/*-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-tertiary,
+input[type="submit"] {
+	max-width: 285px;
+	min-height: 40px;
+}
+
+.btn-primary {
+    border: 2px solid #00b388 !important;
+    border-collapse: collapse;
+    color: #000 !important;
+}
+
+.btn,
+.btn-primary,
+.btn-primary.alpha {
+    background: #00b388 none repeat scroll 0 0;
+}
+
+.btn-primary.active,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover {
+    background: #00b388 none repeat scroll 0 0;
+    border-color: #00b388;
+    box-shadow: none;
+    color: #000;
+    outline: 4px solid #00b388;
+    outline-offset: -2px;
+}
+.btn-primary.focus, .btn-primary:focus {
+    outline: 4px solid #00b388;
+}
+.btn-primary.alpha {
+    background: rgba(0, 179, 136, 0.6) none repeat scroll 0 0;
+    border-color: transparent;
+    color: #fff;
+}
+.btn-primary.alpha .open > .dropdown-toggle.btn-default, .btn-primary.alpha.active, .btn-primary.alpha.focus, .btn-primary.alpha:active, .btn-primary.alpha:focus, .btn-primary.alpha:hover {
+    outline: 4px solid rgba(0, 179, 136, 0.6);
+    outline-offset: -2px;
+}
+.btn-primary.alpha.focus, .btn-primary.alpha:focus {
+    border-color: transparent;
+    outline: 4px solid rgba(0, 179, 136, 0.6);
+}
+
+.btn-secondary {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 2px solid #00b388 !important;
+    color: #000 !important;
+    outline: 0 none;
+}
+
+.btn-secondary.active,
+.btn-secondary.focus,
+.btn-secondary.hover,
+.btn-secondary:active,
+.btn-secondary:focus,
+.btn-secondary:hover,
+input[type="submit"]:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    box-shadow: none;
+    color: #000;
+    outline: 4px solid #00b388;
+    outline-offset: -2px;
+    }
+
+.btn-secondary.focus,
+.btn-secondary:focus,
+input[type="submit"]:focus {
+    outline: 4px solid #00b388;
+    }
+
+.btn-secondary.alpha {
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+    border-color: #00b388;
+    color: #fff !important;
+    }
+
+.btn-secondary.alpha.active,
+.btn-secondary.alpha.focus,
+.btn-secondary.alpha.hover,
+.btn-secondary.alpha:active,
+.btn-secondary.alpha:focus,
+.btn-secondary.alpha:hover {
+	outline: 4px solid #00b388;
+	outline-offset: -2px;
+	color: #fff;
+	}
+
+.btn-secondary.alpha.focus,
+.btn-secondary.alpha:focus {
+	outline: 2px solid #000;
+	color: #fff;
+	}
+
+.btn-tertiary {
+	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+	border: 2px solid rgba(255, 255, 255, 0.6) !important;
+	color: #fff !important;
+	}
+
+.btn-tertiary.active,
+.btn-tertiary:active,
+.btn-tertiary:hover {
+	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+	border-color: transparent;
+	box-shadow: none;
+	color: #000;
+	border-color: transparent !important;
+	outline: 4px solid rgba(255, 255, 255, 0.6) !important;
+	outline-offset: -2px;
+    }
+
+.btn-tertiary.focus,
+.btn-tertiary:focus {
+    border-color: transparent !important;
+    outline: 4px solid rgba(255, 255, 255, 0.6) !important;
+}
+
+@media screen and (max-width: 767px) {
+	.btn-primary,
+	.btn-secondary,
+	.btn-tertiary {
+		max-width: 250px;
+		min-width: 125px;
+	}
+}
