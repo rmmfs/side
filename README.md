@@ -1,2 +1,2 @@
 # side
-Desenvolvimento de tema para Wordpress CMS
+Desenvolvimento de tema para wordpress CMS
