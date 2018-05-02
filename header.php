@@ -26,7 +26,7 @@
 
 	<!--[if lt IE 8]>
 		<p class="body-copy-large">Está a aceder a este sítio através de um <strong>browser desatualizado</strong>. Por favor, <a href="http://browsehappy.com/">atualize o seu browser</a> de modo a melhorar a sua experiência de utilização.</p>
-    <![endif]-->
+	<![endif]-->
 
 		<?php if ( ! is_page(6) ) : ?>
 		<header id="masthead" class="site-header" role="banner">
@@ -35,7 +35,6 @@
 				<div class="top-header">
 					<ul>
 						<li>PORTUGAL (PT)</li>
-						<!--li><a></a></li-->
 						<li><a>Área pessoal</a></li>
 						<li><a href="http://localhost/hpe/contactos">Contacte-nos</a></li>
 						<?php
@@ -50,21 +49,17 @@
 
 				<div class="main-header">
 					<div class="logo">
-
 						<a class="brand" href="http://localhost/hpe/home/">
-	                        <img src="http://www.hpesidebyside.pt/wp-content/uploads/2015/12/hpe-sbs1.png" />
-	                     </a>
-
-	                </div>
+							<img src="http://www.hpesidebyside.pt/wp-content/uploads/2015/12/hpe-sbs1.png" />
+						</a>
+					</div>
 					<nav class="main-menu" role="navigation">
 						<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 					</nav>
 					<div class="search-icon">
-	                	<div id="search-icon"><div>
-	                </div>
-
+						<div id="search-icon"><div>
+					</div>
 				</div>
-
 			</div>
 		</header>
 
@@ -77,15 +72,14 @@
 		</div>
 
 		<script>
-            $( document ).ready(function() {
+		$( document ).ready(function() {
 			$('#search-icon').click(function(){
 				$('#search-area').slideToggle('slow');
 			});
-
 			$('#close-search-icon').click(function(){
 				$('#search-area').slideToggle('slow');
 			});
-			});
-        </script>
+		});
+		</script>
 
 		<?php endif; ?>
