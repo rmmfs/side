@@ -45,7 +45,7 @@
 						<div class="col5-5">
 						</div>
 					</div>
-					<p class="hp-copyright">© Copyright 2015-2018 Hewlett Packard Enterprise Development LP. Todos os direitos reservados.<br>Os produtos e os nomes de empresas mencionados são marcas comerciais dos seus respetivos proprietários.</p>
+					<p class="hp-copyright">© Copyright Hewlett Packard Enterprise Development LP. Todos os direitos reservados.<br>Os produtos e os nomes de empresas mencionados são marcas comerciais dos seus respetivos proprietários.</p>
 				</div>
 			</div>
 		</footer>
