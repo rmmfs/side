@@ -7,7 +7,7 @@ Role: ux/ui design, front-end development & content management
 Version: 2
 Online since: 01/01/16
 Last update: 18/02/18
-Description: Main styles
+Description: main styles
 -------------------------------------------*/
 
 /* structure
@@ -29,8 +29,6 @@ body { height: 100%; }
 		display: table-row;
 		height: 1px;
 		}
-
-section { }
 
 .wrapper {
 	width: 87.5%;
@@ -661,7 +659,7 @@ header {
 .title-area {
 	text-align: center;
 	margin-top: 160px;
-    margin-bottom: 60px;
+	margin-bottom: 60px;
     }
 
 	.title-area h1,
@@ -800,17 +798,17 @@ footer {
 		font-size: 16px;
 		color: #d93a09;
 		margin: 10px 0;
-		}
+	}
 
 	.loader {
-	  margin: 0 0 2em;
-	  height: 100px;
-	  width: 20%;
-	  text-align: center;
-	  padding: 1em;
-	  margin: 0 auto 1em;
-	  display: inline-block;
-	  vertical-align: top;
+		margin: 0 0 2em;
+		height: 100px;
+		width: 20%;
+		text-align: center;
+		padding: 1em;
+		margin: 0 auto 1em;
+		display: inline-block;
+		vertical-align: top;
 	}
 
 
@@ -936,8 +934,8 @@ footer {
 .tab-area {
 	width: 90%;
 	min-height: 285px;
-	margin: 0 auto; }
-
+	margin: 0 auto;
+}
 
 	.tab-area .col3-1,
 	.tab-area .col3-2 {
